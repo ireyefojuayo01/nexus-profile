@@ -1,0 +1,223 @@
+/* ==============================
+   General Styles
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0b111a;
+    color: #f5f7fa;
+    line-height: 1.6;
+}
+
+
+/* ==============================
+   Navigation
+================================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #0b111a;
+    border-bottom: 1px solid #1f2b38;
+}
+
+nav {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #4da3ff;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+nav ul a {
+    color: #f5f7fa;
+    text-decoration: none;
+}
+
+nav ul a:hover {
+    color: #4da3ff;
+}
+
+
+/* ==============================
+   Hero Section
+================================= */
+
+.hero {
+    min-height: 90vh;
+    max-width: 1100px;
+    margin: auto;
+    padding: 80px 20px;
+
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.intro {
+    color: #4da3ff;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    font-size: clamp(3rem, 8vw, 6rem);
+    line-height: 1;
+    margin: 15px 0;
+}
+
+.hero h2 {
+    color: #b7c4d3;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    color: #9caaba;
+    max-width: 600px;
+}
+
+
+/* ==============================
+   Buttons
+================================= */
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.hero-buttons a,
+#contact a {
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero-buttons a:first-child {
+    background: #4da3ff;
+    color: #08101a;
+}
+
+.hero-buttons a:last-child {
+    border: 1px solid #4da3ff;
+    color: #4da3ff;
+}
+
+
+/* ==============================
+   General Sections
+================================= */
+
+section:not(.hero) {
+    max-width: 1100px;
+    margin: auto;
+    padding: 100px 20px;
+}
+
+section h2 {
+    color: #4da3ff;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+
+/* ==============================
+   Projects
+================================= */
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.project-card {
+    padding: 25px;
+    background: #111b27;
+    border: 1px solid #1f2b38;
+    border-radius: 10px;
+}
+
+.project-card h3 {
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    color: #9caaba;
+}
+
+
+/* ==============================
+   Footer
+================================= */
+
+footer {
+    padding: 30px 20px;
+    text-align: center;
+    border-top: 1px solid #1f2b38;
+    color: #718096;
+}
+
+
+/* ==============================
+   Responsive Design
+================================= */
+
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        min-height: 80vh;
+    }
+
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+}
